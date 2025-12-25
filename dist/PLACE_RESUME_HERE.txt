@@ -1,0 +1,11 @@
+Please add your resume PDF file here!
+
+Instructions:
+1. Name your resume file "resume.pdf"
+2. Place it in this public/ folder
+3. Delete this PLACE_RESUME_HERE.txt file
+
+The resume download button will automatically work once you add your PDF.
+
+If you want to use a different filename, update the "resumeFile" field in:
+src/data/portfolioData.js

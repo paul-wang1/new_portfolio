@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Bold earth tone theme with generous spacing */
+  body {
+    @apply bg-neutral-100 text-neutral-700;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+  }
+
+  /* Typography scale - BOLD & IMPACTFUL */
+  h1 {
+    @apply text-neutral-900;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
+    @apply text-neutral-900;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    @apply text-neutral-800;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+}
+
+@layer components {
+  /* Section containers with generous margins */
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 sm:px-12 lg:px-16;
+  }
+
+  /* Wide section container for more breathing room */
+  .section-container-wide {
+    @apply max-w-[1400px] mx-auto px-8 sm:px-16 lg:px-24;
+  }
+
+  /* Narrow section container for focused content */
+  .section-container-narrow {
+    @apply max-w-4xl mx-auto px-6 sm:px-12;
+  }
+
+  /* Full-width colored section backgrounds */
+  .section-full-primary {
+    @apply w-full bg-primary-600 text-neutral-50;
+  }
+
+  .section-full-secondary {
+    @apply w-full bg-secondary-600 text-neutral-50;
+  }
+
+  .section-full-cream {
+    @apply w-full bg-neutral-100;
+  }
+
+  /* Gradient text using earth tone colors */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent;
+  }
+
+  /* Large editorial-style headings */
+  .heading-hero {
+    @apply text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight;
+  }
+
+  .heading-section {
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight;
+  }
+
+  .heading-subsection {
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight;
+  }
+
+  /* Generous spacing utilities */
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-36;
+  }
+
+  .section-padding-sm {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .section-padding-lg {
+    @apply py-24 md:py-32 lg:py-40;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out forwards;
+  }
+}
